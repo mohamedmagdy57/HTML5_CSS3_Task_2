@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(194, 201, 206, 0.863);
+}
+
+
+.header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    margin-left: 0px;
+    height: 130px;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-right ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.header-right ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3 ease;
+    font-weight: 800;
+}
+
+.header-right ul li a:hover{
+
+    background-color: rgb(255, 12, 12);
+    color: beige;
+}
+
+.call{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  justify-content: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.menu li {
+  padding: 15px 25px;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+    font-size: 30px;
+
+}
+
+.menu li:hover {
+  background: #f5f5f5;
+}
+
+.menu li.more {
+  position: relative;
+  padding-right: 20px; 
+}
+
+.menu li.more::after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid red; 
+  transition: transform 0.3s ease;
+}
+
+.menu li.more:hover::after {
+  transform: translateY(-50%) rotate(180deg); 
+}
+
+.menu li.more .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 10;
+}
+
+.menu li.more .dropdown li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.menu li.more .dropdown li:hover {
+  background: #f5f5f5;
+}
+
+.menu li.more:hover .dropdown {
+  display: block;
+}
+
+.menu li.deals {
+  background: orange;
+  color: black;
+  height: 100px;
+}
+
+.order-btn {
+  background: #d40000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 100px;
+  transition: 0.3s;
+  border-radius: 4px;
+  flex:5;
+  font-weight: 1000;
+font-size: 30px;
+
+}
+
+.order-btn:hover {
+  background: #a30000;
+  transform: scale(1.04);
+  box-shadow: 0px -2px 2px rgb(105, 100, 100);
+    border-radius: 8px;
+}
+
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content:left;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.699); 
+  padding: 15px;
+  list-style: none;
+}
+.hero ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3 ease;
+}
+
+.hero ul a:hover{
+    transform: scale(1.1);
+    border-bottom: 3px solid rgb(201, 22, 22) ;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container .card{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    margin-top: 20px;
+    width: 700px;
+}
+
+.container .card .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .card .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.container .card .right h3{
+    color: red;
+}
+
+select {
+  appearance: none;       
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 30px 8px 10px; 
+  font-size: 16px;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='red' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center; 
+  background-size: 20px;
+}
+
+
+.strenght{
+    width: 200px;
+    box-shadow: 0px -2px 2px rgb(105, 100, 100);
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+
+.size{
+box-shadow: 0px -2px 2px rgb(105, 100, 100);
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+
+.customize {
+    height: 30px;
+    background-color: gray;
+}
+.add-to-cart{
+    height: 50px;
+    background-color: rgb(192, 7, 7);
+}
+
+.customize , .add-to-cart{
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3 ease;
+}
+
+.add-to-cart:hover{
+    background-color: red;
+    transform: scale(1.2);
+}
+
+.customize:hover{
+    background-color: rgb(80, 64, 64);
+    transform: scale(1.1);
+}
