@@ -355,8 +355,6 @@ box-shadow: 0px -2px 2px rgb(105, 100, 100);
   }
 
   .hero ul {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    position: relative;
   }
 }
